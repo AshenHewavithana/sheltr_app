@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "427448119790",
+    "project_id": "sheltr-app",
+    "storage_bucket": "sheltr-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427448119790:android:fd89bf26efa54a8bdc5eff",
+        "android_client_info": {
+          "package_name": "com.example.sheltr_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427448119790-6ff5brt2t026ocus3h462aub4tp4vn0o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sheltr_flutter",
+            "certificate_hash": "3ace0e70955ca92f1a8a2fde11ecb7b0e6cf8c5e"
+          }
+        },
+        {
+          "client_id": "427448119790-6mohvnc7j9p4s6h0lqcq7m68fdpu3tjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA4a9-l5P0QXFYByZEPwOG3WHIxHNJC_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427448119790-6mohvnc7j9p4s6h0lqcq7m68fdpu3tjb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "427448119790-rkp0s5m8vaqcus3q1qjb8qio1340uj4c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sheltrFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
