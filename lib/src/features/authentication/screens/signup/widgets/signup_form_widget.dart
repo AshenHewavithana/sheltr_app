@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sheltr_flutter/src/features/authentication/controllers/signup_controller.dart';
-import 'package:sheltr_flutter/src/features/authentication/screens/forgot_password/forgot_password_otp/otp_screen.dart';
-import 'package:sheltr_flutter/src/features/core/screens/dashboard/dashboard.dart';
+import 'package:sheltr_flutter/src/features/authentication/screens/on_boarding_screen/on_boarding_screen.dart';
 
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
@@ -64,12 +63,12 @@ class SignUpFormWidget extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // SignUpController.instance.registerUser(
-                    //     controller.email.text.trim(),
-                    //     controller.email.text.trim());
-                    // SignUpController.instance.phoneAuthentication(
-                    //     controller.phoneNumber.text.trim());
-                    // Get.to(OTPScreen());
+                    SignUpController.instance.registerUser(
+                        controller.email.text.trim(),
+                        controller.email.text.trim());
+                    SignUpController.instance.phoneAuthentication(
+                        controller.phoneNumber.text.trim());
+                    Get.to(onBoardingScreen());
                     final user = UserModel(
                       email: controller.email.text.trim(),
                       password: controller.password.text.trim(),
@@ -78,6 +77,7 @@ class SignUpFormWidget extends StatelessWidget {
                     );
                     SignUpController.instance.createUser(user);
                   }
+                  Get.to(() => onBoardingScreen());
                 },
                 child: Text(SignUp.toUpperCase()),
               ),

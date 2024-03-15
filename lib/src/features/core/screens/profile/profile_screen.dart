@@ -5,6 +5,7 @@ import 'package:sheltr_flutter/src/constants/colors.dart';
 import 'package:sheltr_flutter/src/constants/image_strings.dart';
 import 'package:sheltr_flutter/src/constants/sizes.dart';
 import 'package:sheltr_flutter/src/constants/text_strings.dart';
+import 'package:sheltr_flutter/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:sheltr_flutter/src/features/core/screens/profile/update_profile_screen.dart';
 
 import 'widgets/profile_menu.dart';
@@ -146,7 +147,9 @@ class ProfileScreen extends StatelessWidget {
                 icon: LineAwesomeIcons.alternate_sign_out,
                 textColor: Colors.red,
                 endIcon: false,
-                onPress: () {},
+                onPress: () {
+                  Get.to(() => WelcomeScreen());
+                },
               )
             ],
           ),

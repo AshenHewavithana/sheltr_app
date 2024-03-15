@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sheltr_flutter/src/features/authentication/screens/login/login_screen.dart';
 
 import '../../../../../constants/image_strings.dart';
 import '../../../../../constants/sizes.dart';
@@ -29,7 +31,9 @@ class SignUpFooterWidget extends StatelessWidget {
           ),
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => LoginScreen());
+            },
             child: Text.rich(TextSpan(children: [
               TextSpan(
                   text: AlreadyHaveAnAccount,

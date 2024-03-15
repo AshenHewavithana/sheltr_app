@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sheltr_flutter/src/features/authentication/controllers/login_controller.dart';
@@ -6,7 +5,6 @@ import 'package:sheltr_flutter/src/features/core/screens/dashboard/dashboard.dar
 import '../../../../constants/sizes.dart';
 import '../../../../constants/text_strings.dart';
 import '../forgot_password/forgot_password_options/forgot_password_bottom_sheet.dart';
-import '../forgot_password/forgot_password_options/forgot_password_btn_widget.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({
@@ -63,6 +61,7 @@ class LoginFormWidget extends StatelessWidget {
                   // LoginController.instance.loginUser(
                   //     controller.email.text.trim(),
                   //     controller.password.text.trim());
+                  Get.to(() => Dashboard());
                 },
                 child: Text(LoginButton.toUpperCase())),
           )

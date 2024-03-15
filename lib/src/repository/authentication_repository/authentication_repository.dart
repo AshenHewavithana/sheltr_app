@@ -1,10 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sheltr_flutter/src/constants/text_strings.dart';
 import 'package:sheltr_flutter/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:sheltr_flutter/src/features/core/screens/dashboard/dashboard.dart';
-import 'package:sheltr_flutter/src/features/core/screens/maps/map_screen.dart';
 import 'package:sheltr_flutter/src/repository/authentication_repository/exceptions/signup_email_password_failure.dart';
 
 class AuthenticationRepository extends GetxController {
@@ -24,7 +21,7 @@ class AuthenticationRepository extends GetxController {
 
   _setInitialScreen(User? user) {
     user == null
-        ? Get.offAll(() => const MapScreen())
+        ? Get.offAll(() => const WelcomeScreen())
         : Get.offAll(() => const Dashboard());
   }
 

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sheltr_flutter/src/features/core/screens/shared_rooms/shared_rooms_screen.dart';
+import 'package:sheltr_flutter/src/features/core/screens/single_rooms/single_rooms_screen.dart';
 
 import '../../../../../constants/colors.dart';
 import '../../../../../constants/image_strings.dart';
@@ -37,12 +40,18 @@ class Categories extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                Text(
-                  DashboardBannerTitle1,
-                  style: txtTheme.headline4,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
+                TextButton(
+                    onPressed: () {
+                      Get.to(() => SingleRoom(
+                            txtTheme: txtTheme,
+                          ));
+                    },
+                    child: Text(
+                      DashboardBannerTitle1,
+                      style: txtTheme.headline4,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
               ],
             ),
           ),
@@ -74,12 +83,18 @@ class Categories extends StatelessWidget {
                     const SizedBox(
                       height: 25,
                     ),
-                    Text(
-                      DashboardBannerTitle2,
-                      style: txtTheme.headline4,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
+                    TextButton(
+                        onPressed: () {
+                          Get.to(() => SharedRoom(
+                                txtTheme: txtTheme,
+                              ));
+                        },
+                        child: Text(
+                          DashboardBannerTitle2,
+                          style: txtTheme.headline4,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        )),
                   ],
                 ),
               )

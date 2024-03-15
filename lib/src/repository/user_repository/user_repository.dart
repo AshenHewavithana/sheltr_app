@@ -34,10 +34,10 @@ class UserRepository extends GetxController {
     return userData;
   }
 
-  // Future<List<UserModel>> allUser() async {
-  //   final snapshot = await _db.collection("Users").get();
-  //   final userData =
-  //       snapshot.docs.map((e) => UserModel.fromSnapshot(e)).toList();
-  //   return userData;
-  // }
+  Future<List<UserModel>> allUser() async {
+    final snapshot = await _db.collection("Users").get();
+    final userData =
+        snapshot.docs.map((e) => UserModel.fromSnapshot(e)).toList();
+    return userData;
+  }
 }

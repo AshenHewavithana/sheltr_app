@@ -21,6 +21,7 @@ class PlaceResults extends ChangeNotifier {
 
 class SearchToggle extends ChangeNotifier {
   bool searchToggle = false;
+
   void toggleSearch() {
     searchToggle = !searchToggle;
     notifyListeners();

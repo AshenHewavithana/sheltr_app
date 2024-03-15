@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sheltr_flutter/src/constants/colors.dart';
 import 'package:sheltr_flutter/src/constants/image_strings.dart';
 import 'package:sheltr_flutter/src/constants/sizes.dart';
 import 'package:sheltr_flutter/src/constants/text_strings.dart';
+import 'package:sheltr_flutter/src/features/core/screens/rent_rooms/rent_rooms_screen.dart';
 
 import 'widgets/appBar.dart';
 import 'widgets/categories.dart';
@@ -86,12 +88,16 @@ class Dashboard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Flexible(
-                            child: Text(
-                              "Join Now\nTo Rent your Property",
-                              style: txtTheme.headline3,
-                              maxLines: 3,
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            child: TextButton(
+                                onPressed: () {
+                                  Get.to(() => RentRoom());
+                                },
+                                child: Text(
+                                  "Join Now\nTo Rent your Property",
+                                  style: txtTheme.headline3,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                )),
                           ),
                           const Flexible(
                               child:
